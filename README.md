@@ -39,7 +39,10 @@ carcosa -Sr git://path.to/remote.git
 Secrets can be added by using `-A` flag:
 
 ```
-carcosa -A my-super-password
+carcosa -A password-identifier # enter password when asked, press CTRL+D, and wait ~10 seconds
+# or 
+ echo mypassword | carcosa -A password-identifier 
+# note that space in the beginning is required to exclude password from history
 ```
 
 Note that a new added secret will be synced to the remote (if any)
